@@ -6,7 +6,7 @@ const dev = process.argv.includes('dev');
 const config = {
 	kit: {
 		adapter: adapter({
-			fallback: 'fallback.html'
+			fallback: '404.html'
 		}),
 		paths: {
 			base: dev ? '' : '/notatnyk-svelte'

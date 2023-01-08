@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { data } from '$lib/store';
+	import { base } from '$app/paths';
 
 	let loaded = false;
 
@@ -15,8 +16,8 @@
 </svelte:head>
 
 <header>
-	<a href="/">Notes</a>
-	<a href="/templates">Templates</a>
+	<a href="{base}/">Notes</a>
+	<a href="{base}/templates">Templates</a>
 	<button on:click={data.persist} disabled={!loaded}>Persist data</button>
 </header>
 <br />

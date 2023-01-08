@@ -4,6 +4,7 @@
 	import { data } from '$lib/store';
 	import FieldList from '$lib/FieldList.svelte';
 	import RefList from '$lib/RefList.svelte';
+	import { base } from '$app/paths';
 
 	const id = +$page.params.id;
 	const isNew = id === 0;
@@ -22,7 +23,7 @@
 
 		data.saveNote(note);
 
-		goto('/');
+		goto(base);
 	}
 </script>
 

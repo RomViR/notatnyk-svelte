@@ -4,6 +4,7 @@
 	import { data } from '$lib/store';
 	import FieldList from '$lib/FieldList.svelte';
 	import RefList from '$lib/RefList.svelte';
+	import { base } from '$app/paths';
 
 	const id = $page.params.id;
 	const template = id ? $data.templates[id] : data.nullTemplate();
@@ -14,7 +15,7 @@
 
 		data.saveTemplate(template);
 
-		goto('/templates');
+		goto(`${base}/templates`);
 	}
 </script>
 
